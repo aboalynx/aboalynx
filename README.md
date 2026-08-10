@@ -56,6 +56,6 @@ one wins.
 
 ### Reach me
 
-- Email — <!-- your email -->
-- LinkedIn — <!-- your linkedin url -->
+- Email — m.abdelbary.a@gmail.com
+- LinkedIn — https://www.linkedin.com/in/mohamedabdelbary1985
 - Open to remote backend roles
