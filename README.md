@@ -84,4 +84,4 @@ Open to remote backend roles.
 
 - Writing at [dev.to/aboalynx](https://dev.to/aboalynx)
 - LinkedIn — [linkedin.com/in/mohamedabdelbary1985](https://www.linkedin.com/in/mohamedabdelbary1985)
-- Email — [m.abdelbary.a@gmail.com]
+- Email — [m.abdelbary.a@gmail.com](mailto:m.abdelbary.a@gmail.com)
