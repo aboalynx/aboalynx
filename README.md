@@ -15,14 +15,48 @@ Based in Egypt, working remotely.
 
 ---
 
-### What I've built
+## Featured
+
+### [@aboalynx/payment](https://github.com/aboalynx/payment)
+
+[![npm](https://img.shields.io/npm/v/@aboalynx/payment)](https://www.npmjs.com/package/@aboalynx/payment)
+[![CI](https://github.com/aboalynx/payment/actions/workflows/ci.yml/badge.svg)](https://github.com/aboalynx/payment/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aboalynx/payment/blob/main/LICENSE)
+
+Gateway-agnostic payment processing for NestJS. One interface over Stripe and PayPal, so
+changing provider is a configuration change rather than a code change.
+
+Capability interfaces and discriminated-union results make the compiler force callers to
+handle every payment outcome, not just the happy path. A shared contract suite runs the
+same assertions against every gateway — which is how I found that `capture()` meant two
+different things on the two providers, and fixed it.
+
+128 tests · 97% statement coverage · CI on Node 20 and 22 · published from CI with build
+provenance.
+
+```sh
+npm i @aboalynx/payment
+```
+
+### [seatmap](https://github.com/aboalynx/seatmap)
+
+A NestJS service answering one question properly: what happens when thousands of people
+click the same seat at the same millisecond?
+
+Redis holds seats optimistically with a TTL, PostgreSQL decides what has actually been
+sold, and the test suite fires 200 simultaneous requests at a single seat and asserts
+that exactly one of them wins.
+
+Write-up: [What happens when 20,000 people click the same seat?](https://dev.to/aboalynx/what-happens-when-20000-people-click-the-same-seat-245n)
+
+---
+
+## What I've built
 
 **Multi-tenant SaaS for charity and education organisations.** Laravel Octane on
 FrankenPHP with a Next.js BFF frontend, database-per-tenant isolation, and a hybrid
-provisioning model that lets certain tenants keep their database on their own
-servers — custom bootstrapper, scoped credential management, auto-provisioning with
-rollback. Also built the payment layer: one package, one call signature, several
-providers behind it.
+provisioning model that lets certain tenants keep their database on their own servers —
+custom bootstrapper, scoped credential management, auto-provisioning with rollback.
 
 **Stadium ticketing and attendance.** Seat booking driven entirely by SVG venue maps,
 handling 12,000–20,000 spectators per fixture, with admin-side seat distribution wired
@@ -34,28 +68,20 @@ flow and built the backend and relay.
 
 ---
 
-### Stack
+## Stack
 
-**Backend** · PHP, Laravel, Laravel Octane, FrankenPHP, Horizon, Node.js, NestJS, TypeScript
-**Data** · PostgreSQL, MySQL, ClickHouse, Redis, RabbitMQ
-**Frontend** · Next.js, Vue, Flutter
-**Infra** · Docker, Debian, PgBouncer, Prometheus, Sentry
-**AI** · RAG pipelines, vector databases, local LLMs (Ollama), spec-driven development workflows
-
----
-
-### Featured
-
-**[seatmap](https://github.com/aboalynx/seatmap)** — a NestJS service answering one
-question properly: what happens when thousands of people click the same seat at once.
-Redis holds seats optimistically with a TTL, PostgreSQL decides what was actually sold,
-and the test suite fires 200 simultaneous requests at a single seat to prove exactly
-one wins.
+- **Backend** — PHP, Laravel, Laravel Octane, FrankenPHP, Horizon, Node.js, NestJS, TypeScript
+- **Data** — PostgreSQL, MySQL, ClickHouse, Redis, RabbitMQ
+- **Frontend** — Next.js, Vue, Flutter
+- **Infra** — Docker, Debian, PgBouncer, Prometheus, Sentry
+- **AI** — RAG pipelines, vector databases, local LLMs (Ollama), spec-driven development workflows
 
 ---
 
-### Reach me
+## Reach me
 
-- Email — <!-- your email -->
-- LinkedIn — <!-- your linkedin url -->
-- Open to remote backend roles
+Open to remote backend roles.
+
+- Writing at [dev.to/aboalynx](https://dev.to/aboalynx)
+- LinkedIn — [linkedin.com/in/mohamedabdelbary1985](https://www.linkedin.com/in/mohamedabdelbary1985)
+- Email — [m.abdelbary.a@gmail.com]
